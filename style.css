@@ -1,0 +1,246 @@
+/* Camp Journey NW — shared styles */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green:  #2d6a4f;
+  --green-light: #52b788;
+  --amber:  #e76f51;
+  --cream:  #f8f5f0;
+  --text:   #1b1b1b;
+  --muted:  #555;
+  --radius: 8px;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ── Header ── */
+header {
+  background: var(--green);
+  color: #fff;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a {
+  color: #d8f3dc;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  font-family: Arial, sans-serif;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ── Main ── */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ── Hero / Coming-Soon ── */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.hero .badge {
+  display: inline-block;
+  background: var(--amber);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--green);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.hero .cta-links a {
+  display: inline-block;
+  margin: 0.4rem 0.6rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius);
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.hero .cta-links a:hover { opacity: 0.85; }
+
+.hero .cta-links .btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.hero .cta-links .btn-secondary {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+/* ── Cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ── Articles ── */
+.article + .article {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+
+.article .meta {
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.article h2 {
+  font-size: 1.6rem;
+  color: var(--green);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.article p { margin-bottom: 1rem; }
+
+/* ── Events ── */
+.event-list { list-style: none; margin-top: 1.5rem; }
+
+.event-list li {
+  background: #fff;
+  border-left: 4px solid var(--green-light);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.event-list .event-date {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-list h3 { margin: 0.2rem 0 0.4rem; }
+
+.event-list p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  margin: 0;
+}
+
+/* ── Contact ── */
+.contact-box {
+  background: var(--green);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.contact-box h2 { margin-bottom: 0.8rem; }
+
+.contact-box p { margin-bottom: 0.5rem; }
+
+.contact-box a {
+  color: #d8f3dc;
+  text-decoration: underline;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid #ddd;
+}
+
+/* ── Page headings ── */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h2 {
+  font-size: 2rem;
+  color: var(--green);
+  margin-bottom: 0.4rem;
+}
+
+.page-header p {
+  color: var(--muted);
+}
